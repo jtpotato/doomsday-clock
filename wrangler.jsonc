@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "delicate-boat-0816",
+	"name": "doomsday-clock-8618",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-04-27",
 	"observability": {
