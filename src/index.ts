@@ -25,7 +25,8 @@ function progressBar(fraction: number) {
 	const emptyBlocks = totalBlocks - filledBlocks;
 	const filled = filledBlock.repeat(filledBlocks);
 	const empty = emptyBlock.repeat(emptyBlocks);
-	return `[${filled}${empty}] ${Math.round(fraction * 100)}%`;
+	const percentage = Math.round(fraction * 100);
+	return `[${filled}${empty}] ${percentage < 0 ? 0 : percentage}%`;
 }
 
 export default {
