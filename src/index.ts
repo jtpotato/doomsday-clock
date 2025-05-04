@@ -18,7 +18,10 @@ function progressBar(fraction: number) {
 	const filledBlock = '\u2588'; // Full block
 	const emptyBlock = '\u25AF'; // Light shade
 	const totalBlocks = 30; // Total number of blocks in the progress bar
-	const filledBlocks = Math.round(fraction * totalBlocks);
+	let filledBlocks = Math.round(fraction * totalBlocks);
+	if (filledBlocks < 0) {
+		filledBlocks = 0;
+	}
 	const emptyBlocks = totalBlocks - filledBlocks;
 	const filled = filledBlock.repeat(filledBlocks);
 	const empty = emptyBlock.repeat(emptyBlocks);
